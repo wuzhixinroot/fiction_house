@@ -213,13 +213,13 @@ novel-admin ：平台后台管理系统源码（独立项目，按需安装）
 
 #### QQ交流群
 
-![mini-code](./assets/qq_group.png)
+![mini-code](https://s1.ax1x.com/2020/10/31/BUQVeI.png)
 
 #### 捐赠支持
 
 开源项目不易，若此项目能得到你的青睐，可以捐赠支持作者持续开发与维护。 
 
-![mini-code](./assets/jk.png)
+![mini-code](https://s1.ax1x.com/2020/10/31/BUQJwq.png)
 
 ##### 捐赠名单 
 
@@ -249,4 +249,4 @@ novel-admin ：平台后台管理系统源码（独立项目，按需安装）
 
 [![index]( https://s1.ax1x.com/2020/07/03/NOSuMF.jpg)](https://www.aliyun.com/minisite/goods?userCode=uf4nasee )
 
-<font color=#ff0000 size=7 face="黑体">部分截图在github上可能无法正常显示，请下载到本地查看。</font>
+# 部分截图在github上可能无法正常显示，请下载到本地查看。
