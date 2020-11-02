@@ -1,8 +1,42 @@
+<<<<<<< HEAD
 # 小说精品屋
 
 #### 项目文档
 
 [点击前往]( http://www.java2nb.com/article/5.html )
+=======
+[![index]( https://s1.ax1x.com/2020/07/03/NOSA5q.jpg )](https://cloud.tencent.com/act/cps/redirect?redirect=1052&cps_key=736e609d66e0ac4e57813316cec6fd0b&from=console)
+
+# 小说精品屋
+
+#### 新项目：小说精品屋-plus（推荐）
+
+小说精品屋-plus致力于打造一个完整的可商用、可学习的小说门户平台。小说精品屋-plus是在小说精品屋的基础上，重新进行了数据库设计、代码重构和功能增强，提升了程序整体的可读性和性能，增加了很多商用特性。 
+
+Gitee仓库地址： https://gitee.com/xiongxyang/novel-plus
+
+GitHub仓库地址： https://github.com/201206030/novel-plus
+
+#### 新项目：小说精品屋-微服务版（推荐）
+
+基于小说精品屋-plus构建的Spring Cloud 微服务小说门户平台，可用于学习和商用。
+
+Gitee仓库地址： https://gitee.com/xiongxyang/novel-cloud
+
+GitHub仓库地址： https://github.com/201206030/novel-cloud
+
+#### 前言
+
+安装前请先阅读完此文档，了解项目基础配置和模块功能，再根据安装文档安装项目，避免一些不必要的错误。
+
+#### 安装文档
+
+源码安装文档（适合有一定技术基础的人）：[点击前往](https://my.oschina.net/java2nb/blog/3145593)  
+
+包安装文档（适合非技术人员）：[点击前往](https://my.oschina.net/java2nb/blog/3146627)  
+
+宝塔安装教程：[点击前往](https://www.daniao.org/7822.html )
+>>>>>>> update
 
 #### 项目介绍
 
@@ -23,6 +57,7 @@ novel-admin ：平台后台管理系统源码（独立项目，按需安装）
 
 1. 电脑端（首页）
 
+<<<<<<< HEAD
    ![index](./assets/%E7%B2%BE%E5%93%81%E5%B0%8F%E8%AF%B4%E6%A5%BC.png)
 
 2. 移动端（首页）
@@ -40,11 +75,33 @@ novel-admin ：平台后台管理系统源码（独立项目，按需安装）
 5. 移动端（小说详情页）
 
    ![微信图片_20190904181558](./assets/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190904181558.png)
+=======
+   ![index](https://static.oschina.net/uploads/img/202006/24151811_wIus.png)
+
+   
+
+2. 移动端（首页）
+
+   ![index](https://static.oschina.net/uploads/img/202006/24151812_OOob.jpg)
+
+3. 移动端（轻小说专区）
+
+   ![index](https://static.oschina.net/uploads/img/202006/24151812_X6vD.jpg)
+
+4. 移动端（动漫专区）
+
+   ![index](https://static.oschina.net/uploads/img/202006/24151812_HK99.png)
+
+5. 移动端（小说详情页）
+
+   ![微信图片_20190904181558](https://static.oschina.net/uploads/img/202006/24151812_ZosF.png)
+>>>>>>> update
 
    
 
 6. 移动端（目录页）
 
+<<<<<<< HEAD
    ![QQ图片20191018161901](./assets/QQ%E5%9B%BE%E7%89%8720191108022250.png)
 
 7. 移动端（小说阅读页）
@@ -54,6 +111,17 @@ novel-admin ：平台后台管理系统源码（独立项目，按需安装）
    8.电脑端（漫画阅读页）
 
    ![index](./assets/mh_content.png)
+=======
+   ![QQ图片20191018161901](https://static.oschina.net/uploads/img/202006/24151812_Krva.png)
+
+7. 移动端（小说阅读页）
+
+   ![QQ图片20191018161901](https://static.oschina.net/uploads/img/202006/24151813_fDgT.png)
+
+   8.电脑端（漫画阅读页）
+
+   ![index](https://oscimg.oschina.net/oscnet/up-66339ecf71dd1db7745e3350170a46ca070.png)
+>>>>>>> update
 
    
 
@@ -91,15 +159,25 @@ novel-admin ：平台后台管理系统源码（独立项目，按需安装）
 
 #### 微信小程序截图
 
+<<<<<<< HEAD
 ![mini4](./assets/mini4.png)
+=======
+![mini4](https://static.oschina.net/uploads/img/202006/24151814_fVcW.png)
+>>>>>>> update
 
 
 
 #### 安卓App截图
 
+<<<<<<< HEAD
 ![mini4](./assets/android_index.png)
 
 #### 安装教程
+=======
+![mini4](https://static.oschina.net/uploads/img/202006/24151814_Vvwg.png)
+
+#### 安装说明
+>>>>>>> update
 
 数据库安装：
 
@@ -113,7 +191,11 @@ novel-admin ：平台后台管理系统源码（独立项目，按需安装）
 1.  运行script/crawlbook/crawlbook.bat脚本文件。（适用于本地多机器运行） 
 2. 安装后台管理系统后，打开爬虫管理菜单，点击爬虫运行按钮。（适用于线上环境运行，会占用较多服务器资源）
 
+<<<<<<< HEAD
 平台后台管理系统安装（独立项目，按需安装） ：
+=======
+平台后台管理系统安装（独立项目，按需安装）（已停止维护，爬虫功能请使用crawlbook.bat） ：
+>>>>>>> update
 
 1. 修改application.yml文件中数据库配置。
 
@@ -161,6 +243,7 @@ novel-admin ：平台后台管理系统源码（独立项目，按需安装）
 
 **喜欢此项目的可以给我的GitHub和Gitee加个Star支持一下 。**
 
+<<<<<<< HEAD
 ##### 演示地址1
 
 [点击前往](http://148.70.59.92:8080)（前台，域名已过期，11月30日服务器过期 ）（未上线漫画专区功能）
@@ -174,6 +257,9 @@ novel-admin ：平台后台管理系统源码（独立项目，按需安装）
 [点击前往](http://www.jsy66.vip/)（前台）
 
 ##### 演示地址4（备用）
+=======
+#### 演示地址
+>>>>>>> update
 
 [点击前往](http://47.106.243.172:8888)（前台）
 
@@ -197,18 +283,36 @@ novel-admin ：平台后台管理系统源码（独立项目，按需安装）
 
 #### QQ交流群
 
+<<<<<<< HEAD
 ![mini-code](./assets/小说精品屋开源项目交流群群聊二维码.png)
+=======
+![mini-code](https://s1.ax1x.com/2020/10/31/BUQVeI.png)
+>>>>>>> update
 
 #### 捐赠支持
 
 开源项目不易，若此项目能得到你的青睐，可以捐赠支持作者持续开发与维护。 
 
+<<<<<<< HEAD
 ![mini-code](./assets/jk.png)
+=======
+![mini-code](https://s1.ax1x.com/2020/10/31/BUQJwq.png)
+>>>>>>> update
 
 ##### 捐赠名单 
 
 | 捐赠者 | 金额     | 时间                        |
 | :----- | :------- | :-------------------------- |
+<<<<<<< HEAD
+=======
+| **阳   | ￥10.00  | 2020年03月06日 下午14点10分 |
+| *梦    | ￥66.00  | 2019年12月27日 下午21点39分 |
+| *金名  | ￥50.00  | 2019年12月27日 下午19点29分 |
+| *天气  | ￥300.00 | 2019年12月27日 上午10点13分 |
+| *强    | ￥10.00  | 2019年12月25日 下午21点29分 |
+| *生    | ￥50.00  | 2019年12月25日 下午18点36分 |
+| *江云  | ￥100.00 | 2019年12月20日 下午19点57分 |
+>>>>>>> update
 | *磊    | ￥3.00   | 2019年12月17日 下午18点09分 |
 | *勇    | ￥20.00  | 2019年11月30日 下午16点13分 |
 | *伟    | ￥10.00  | 2019年11月14日 上午11点02分 |
@@ -222,4 +326,12 @@ novel-admin ：平台后台管理系统源码（独立项目，按需安装）
 
 #### 备注
 
+<<<<<<< HEAD
 精品小说屋所有相关项目均已在开源中国公开，感兴趣的可进入[开源中国](https://www.oschina.net/p/fiction_house)按关键字`精品小说屋`搜索。
+=======
+精品小说屋所有相关项目均已在开源中国公开，感兴趣的可进入[开源中国](https://www.oschina.net/p/fiction_house)按关键字`精品小说屋`搜索。
+
+[![index]( https://s1.ax1x.com/2020/07/03/NOSuMF.jpg)](https://www.aliyun.com/minisite/goods?userCode=uf4nasee )
+
+# 部分截图在github上可能无法正常显示，请下载到本地查看。
+>>>>>>> update

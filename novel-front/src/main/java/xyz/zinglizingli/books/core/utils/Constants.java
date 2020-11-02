@@ -95,4 +95,22 @@ public class Constants {
      * 书籍内容页的广告pattern
      * */
     public static final String CONTENT_AD_PATTERN = "<div[^>]+app\\.html[^>]+>\\s*<div[^>]+>\\s*<div[^>]+>[^<]+</div>\\s*<div[^>]+>[^<]+<span[^>]+>>>[^<]+<<</span>\\s*</div>\\s*</div>\\s*</div>";
+<<<<<<< HEAD
+=======
+
+    /**
+     * 是否开启抓取新书
+     * */
+    public static final String ENABLE_NEW_BOOK = "true";
+
+    /**
+     * SEO配置保存的key
+     * */
+    public static final String SEO_CONFIG_KEY = "seoConfig";
+
+    /**
+     * 每次更新抓取的页数
+     */
+    public static final int UPDATE_PAGES_ONCE = 10;
+>>>>>>> update
 }

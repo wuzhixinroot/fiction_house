@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta th:if="${catId == 9}" name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=1">
     <meta th:if="${catId != 9}" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<<<<<<< HEAD
     <title th:text="${bookName}+${indexName}"></title>
 
     <meta name="keywords" th:attr="content=${bookName}+','+${indexName}">
@@ -13,11 +14,24 @@
     <meta property="og:type" content="novel_content"/>
     <meta property="og:title" th:attr="content=${bookName}+${indexName}"/>
     <meta property="og:description" th:attr="content=${bookName}+${indexName}+'最新更新章节免费在线阅读TXT下载'"/>
+=======
+    <title th:text="${title}"></title>
+
+    <meta name="keywords" th:content="${keyword}">
+
+    <meta name="description"
+          th:content="${description}">
+
+    <meta property="og:type" content="novel_content"/>
+    <meta property="og:title" th:attr="content=${title}"/>
+    <meta property="og:description" th:attr="content=${description}"/>
+>>>>>>> update
 
 
     <div th:include="common/css :: css"></div>
 
 
+<<<<<<< HEAD
     <script>
         var _hmt = _hmt || [];
         (function () {
@@ -29,6 +43,8 @@
 
 
     </script>
+=======
+>>>>>>> update
     <script type="text/javascript">
         function reinitIframe(){
 
@@ -205,7 +221,11 @@
         }
         //发送弹幕
         function sendBullet(){
+<<<<<<< HEAD
             var bullet = $("#screenBulletText").val();
+=======
+            var bullet = $("#screenBulletText").val().replace(/</g, "&lt;").replace(/>/g, "&gt;");
+>>>>>>> update
             var contentId = $("#contentIdHidden").val();
             if (bullet && contentId) {
                 if(bullet.length > 100){
@@ -476,6 +496,7 @@
 </script>
 <script>
     (function () {
+<<<<<<< HEAD
         var bp = document.createElement('script');
         var curProtocol = window.location.protocol.split(':')[0];
         if (curProtocol === 'https') {
@@ -486,6 +507,8 @@
         }
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(bp, s);
+=======
+>>>>>>> update
 
         $("#content").css("min-height",($(window).height()-60)+"px");
 

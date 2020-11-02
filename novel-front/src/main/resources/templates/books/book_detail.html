@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<<<<<<< HEAD
     <title th:text="${book.bookName}+'小说最新章节免费阅读和下载'"></title>
     <meta name="keywords" th:attr="content=${book.bookName}+','+${book.bookName}+'最新章节,'+${book.bookName}+'免费阅读,'+${book.bookName}+'TXT下载'">
     <meta name="description"
@@ -21,6 +22,28 @@
     <meta property="og:novel:update_time" th:attr="content=${#dates.format(book.updateTime, 'yy-MM-dd')}"/>
     <meta property="og:novel:latest_chapter_name" th:attr="content=${lastIndexName}"/>
     <meta property="og:novel:latest_chapter_url" th:attr="content='https://www.zinglizingli.xyz/book/'+${bookId}+'/'+${lastIndexNum}+'.html'"/>
+=======
+    <title th:text="${title}"></title>
+
+    <meta name="keywords" th:content="${keyword}">
+
+    <meta name="description"
+          th:content="${description}">
+
+    <meta property="og:type" content="novel"/>
+    <meta property="og:title" th:attr="content=${title}"/>
+    <meta property="og:description" th:attr="content=${book.bookDesc}"/>
+    <meta property="og:image" th:attr="content=${application.webSiteDomain}+${book.picUrl}"/>
+    <meta property="og:novel:category" th:attr="content=${book.cateName}"/>
+    <meta property="og:novel:author" th:attr="content=${book.author}"/>
+    <meta property="og:novel:book_name" th:attr="content=${book.bookName}"/>
+    <meta property="og:novel:read_url"  th:attr="content=${application.webSiteDomain}+'/book/'+${book.id}+'.html'"/>
+    <meta property="og:url" th:attr="content=${application.webSiteDomain}+'/book/'+${book.id}+'.html'"/>
+    <meta property="og:novel:status" th:attr="content=${book.bookStatus}"/>
+    <meta property="og:novel:update_time" th:attr="content=${#dates.format(book.updateTime, 'yy-MM-dd')}"/>
+    <meta property="og:novel:latest_chapter_name" th:attr="content=${lastIndexName}"/>
+    <meta property="og:novel:latest_chapter_url" th:attr="content=${application.webSiteDomain}+'/book/'+${bookId}+'/'+${lastIndexNum}+'.html'"/>
+>>>>>>> update
 
 
 
@@ -113,6 +136,7 @@
 
     </style>
 
+<<<<<<< HEAD
     <script>
 
         var _hmt = _hmt || [];
@@ -137,6 +161,8 @@
             s.parentNode.insertBefore(bp, s);
         })();
     </script>
+=======
+>>>>>>> update
     <script src="/js/wap_collect.js"></script>
 
 </head>

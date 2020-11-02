@@ -14,18 +14,13 @@ import xyz.zinglizingli.books.core.crawl.BiquCrawlSource;
  */
 @Slf4j
 @Configuration
-public class CrawlDingdianConfig {
+public class CrawlBaishuzhaiConfig {
 
 
     @Bean
-<<<<<<< HEAD
     @Primary //必须加此注解，不然报错，下一个类则不需要添加
-    @ConfigurationProperties(prefix = "dingdian.crawlsource") // prefix值必须是application.yml中对应属性的前缀
-    @ConditionalOnProperty(prefix = "dingdian.crawlsource",name = "enabled",havingValue = "true")
-=======
-    @ConfigurationProperties(prefix = "dingdian.crawlsource") // prefix值必须是application.yml中对应属性的前缀
-    @ConditionalOnProperty(prefix = "crawl.website",name = "type",havingValue = "3")
->>>>>>> update
+    @ConfigurationProperties(prefix = "baishuzhai.crawlsource") // prefix值必须是application.yml中对应属性的前缀
+    @ConditionalOnProperty(prefix = "crawl.website",name = "type",havingValue = "4")
     public BaseHtmlCrawlSource dingdianCrawlSource() {
         return new BiquCrawlSource();
     }

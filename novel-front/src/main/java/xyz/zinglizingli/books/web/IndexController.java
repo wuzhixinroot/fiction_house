@@ -2,15 +2,30 @@ package xyz.zinglizingli.books.web;
 
 
 import lombok.RequiredArgsConstructor;
+<<<<<<< HEAD
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+=======
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+>>>>>>> update
 import xyz.zinglizingli.books.core.constant.CacheKeyConstans;
 import xyz.zinglizingli.books.po.Book;
 import xyz.zinglizingli.books.service.BookService;
 import xyz.zinglizingli.common.cache.CommonCacheUtil;
 import xyz.zinglizingli.books.core.config.IndexRecBooksConfig;
 
+<<<<<<< HEAD
+=======
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+>>>>>>> update
 import java.util.List;
 import java.util.Map;
 
@@ -21,8 +36,17 @@ import java.util.Map;
 @Controller
 @RequestMapping
 @RequiredArgsConstructor
+<<<<<<< HEAD
 public class IndexController {
 
+=======
+@Slf4j
+public class IndexController {
+
+    @Value("${index.template}")
+    private String indexTemplate;
+
+>>>>>>> update
 
     private final BookService bookService;
 
@@ -34,7 +58,11 @@ public class IndexController {
 
 
     @RequestMapping(value = {"/index.html","/","/books","/book","/book/index.html"})
+<<<<<<< HEAD
     public String index(ModelMap modelMap){
+=======
+    public String index(@RequestParam(value = "noLazy", defaultValue = "0") String noLazy,HttpServletRequest req,ModelMap modelMap){
+>>>>>>> update
         List<Book> recBooks = (List<Book>) commonCacheUtil.getObject(CacheKeyConstans.REC_BOOK_LIST_KEY);
         if (!indexRecBooksConfig.isRead() || recBooks == null) {
             List<Map<String,String>> configMap = indexRecBooksConfig.getRecBooks();
@@ -56,12 +84,24 @@ public class IndexController {
         if (newBooks == null) {
             //查询最近更新数据
             newBooks = bookService.search(1, 20, null, null, null, null, null, null, null, "update_time", "DESC");
+<<<<<<< HEAD
             commonCacheUtil.setObject(CacheKeyConstans.NEWST_BOOK_LIST_KEY, newBooks, 60 * 30);
+=======
+            commonCacheUtil.setObject(CacheKeyConstans.NEWST_BOOK_LIST_KEY, newBooks, 60 * 10);
+>>>>>>> update
         }
         modelMap.put("recBooks", recBooks);
         modelMap.put("hotBooks", hotBooks);
         modelMap.put("newBooks", newBooks);
+<<<<<<< HEAD
 
         return "books/index";
+=======
+        ServletContext application = req.getServletContext();
+        if(!"1".equals(application.getAttribute("noLazy"))) {
+            application.setAttribute("noLazy", noLazy);
+        }
+        return "books/index_"+indexTemplate;
+>>>>>>> update
     }
 }

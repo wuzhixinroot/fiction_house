@@ -61,6 +61,10 @@ public class BookFilter implements Filter {
 
             //本地图片
             if (requestUri.contains(Constants.LOCAL_PIC_PREFIX)) {
+<<<<<<< HEAD
+=======
+                resp.setDateHeader("expires", System.currentTimeMillis()+60*60*24*10*1000);//缓存10天
+>>>>>>> update
                 OutputStream out = resp.getOutputStream();
                 InputStream input = new FileInputStream(new File(picSavePath + requestUri));
                 byte[] b = new byte[4096];

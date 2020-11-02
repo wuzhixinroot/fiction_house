@@ -8,6 +8,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.StringUtils;
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,6 +17,11 @@ import xyz.zinglizingli.books.po.Book;
 import xyz.zinglizingli.books.po.BookContent;
 import xyz.zinglizingli.books.po.BookIndex;
 import xyz.zinglizingli.books.po.ScreenBullet;
+=======
+import org.springframework.web.bind.annotation.*;
+import xyz.zinglizingli.books.core.config.SeoConfig;
+import xyz.zinglizingli.books.po.*;
+>>>>>>> update
 import xyz.zinglizingli.books.service.BookService;
 import xyz.zinglizingli.books.service.UserService;
 import xyz.zinglizingli.books.vo.BookVO;
@@ -23,6 +29,10 @@ import xyz.zinglizingli.common.cache.CommonCacheUtil;
 import xyz.zinglizingli.books.core.utils.CatUtil;
 import xyz.zinglizingli.books.core.utils.Constants;
 
+<<<<<<< HEAD
+=======
+import javax.servlet.http.HttpServletRequest;
+>>>>>>> update
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.OutputStream;
@@ -49,6 +59,31 @@ public class BookController {
 
 
     /**
+<<<<<<< HEAD
+=======
+     * 单本小说提交页
+     * */
+    @RequestMapping("submit.html")
+    public String bookSubmitPage(){
+        return "books/book_submit";
+    }
+
+    /**
+     * 单本小说提交
+     * */
+    @RequestMapping(method = RequestMethod.POST,value = "submit")
+    @ResponseBody
+    public Map<String, Object> bookSubmit(String bookUrl, String bookName, Float score){
+        Map<String, Object> result = new HashMap<>(2);
+        bookService.addBookParseLog(bookUrl, bookName, score, (byte) 5);
+        result.put("code", 1);
+        return result;
+    }
+
+
+
+    /**
+>>>>>>> update
      * 精品小说搜索页
      */
     @RequestMapping("search")
@@ -180,7 +215,11 @@ public class BookController {
      * 书籍详情页
      */
     @RequestMapping("{bookId}.html")
+<<<<<<< HEAD
     public String detail(@PathVariable("bookId") Long bookId, @RequestParam(value = "token", required = false) String token, ModelMap modelMap) {
+=======
+    public String detail(@PathVariable("bookId") Long bookId, @RequestParam(value = "token", required = false) String token, HttpServletRequest req, ModelMap modelMap) {
+>>>>>>> update
         String userId = commonCacheUtil.get(token);
         if (org.apache.commons.lang3.StringUtils.isNotBlank(userId)) {
             Integer indexNumber = userService.queryBookIndexNumber(userId, bookId);
@@ -215,6 +254,15 @@ public class BookController {
             modelMap.put("lastIndexName", indexList.get(0).getIndexName());
             modelMap.put("lastIndexNum", indexList.get(0).getIndexNum());
         }
+<<<<<<< HEAD
+=======
+        SeoConfig seoConfig = (SeoConfig) req.getServletContext().getAttribute(Constants.SEO_CONFIG_KEY);
+        Map<String,String> page = seoConfig.getPage();
+        modelMap.put("title",page.get("detail.title").replaceAll("<bookName>",book.getBookName()));
+        modelMap.put("keyword",page.get("detail.keyword").replaceAll("<bookName>",book.getBookName()));
+        modelMap.put("description",page.get("detail.description").replaceAll("<bookName>",book.getBookName()));
+
+>>>>>>> update
         return "books/book_detail";
     }
 
@@ -222,12 +270,24 @@ public class BookController {
      * 书籍目录页
      */
     @RequestMapping("{bookId}/index.html")
+<<<<<<< HEAD
     public String bookIndex(@PathVariable("bookId") Long bookId, ModelMap modelMap) {
+=======
+    public String bookIndex(@PathVariable("bookId") Long bookId,HttpServletRequest req, ModelMap modelMap) {
+>>>>>>> update
         List<BookIndex> indexList = bookService.queryAllIndexList(bookId);
         String bookName = bookService.queryBaseInfo(bookId).getBookName();
         modelMap.put("indexList", indexList);
         modelMap.put("bookName", bookName);
         modelMap.put("bookId", bookId);
+<<<<<<< HEAD
+=======
+        SeoConfig seoConfig = (SeoConfig) req.getServletContext().getAttribute(Constants.SEO_CONFIG_KEY);
+        Map<String,String> page = seoConfig.getPage();
+        modelMap.put("title",page.get("catalog.title").replaceAll("<bookName>",bookName));
+        modelMap.put("keyword",page.get("catalog.keyword").replaceAll("<bookName>",bookName));
+        modelMap.put("description",page.get("catalog.description").replaceAll("<bookName>",bookName));
+>>>>>>> update
         return "books/book_index";
     }
 
@@ -236,7 +296,11 @@ public class BookController {
      * 书籍内容页
      */
     @RequestMapping("{bookId}/{indexNum}.html")
+<<<<<<< HEAD
     public String bookContent(@PathVariable("bookId") Long bookId, @PathVariable("indexNum") Integer indexNum, ModelMap modelMap) {
+=======
+    public String bookContent(@PathVariable("bookId") Long bookId, @PathVariable("indexNum") Integer indexNum,HttpServletRequest req, ModelMap modelMap) {
+>>>>>>> update
         BookContent bookContent = bookService.queryBookContent(bookId, indexNum);
         String indexName;
         if (bookContent == null) {
@@ -263,6 +327,14 @@ public class BookController {
         Integer catId = basicBook.getCatid();
         modelMap.put("bookName", bookName);
         modelMap.put("catId", catId);
+<<<<<<< HEAD
+=======
+        SeoConfig seoConfig = (SeoConfig) req.getServletContext().getAttribute(Constants.SEO_CONFIG_KEY);
+        Map<String,String> page = seoConfig.getPage();
+        modelMap.put("title",page.get("content.title").replaceAll("<bookName>",bookName).replaceAll("<indexName>",indexName));
+        modelMap.put("keyword",page.get("content.keyword").replaceAll("<bookName>",bookName).replaceAll("<indexName>",indexName));
+        modelMap.put("description",page.get("content.description").replaceAll("<bookName>",bookName).replaceAll("<indexName>",indexName));
+>>>>>>> update
         return "books/book_content";
     }
 
@@ -287,7 +359,11 @@ public class BookController {
     @ResponseBody
     public Map<String, Object> sendBullet(@RequestParam("contentId") Long contentId, @RequestParam("bullet") String bullet) {
         Map<String, Object> result = new HashMap<>(2);
+<<<<<<< HEAD
         bookService.sendBullet(contentId, bullet);
+=======
+        bookService.sendBullet(contentId, bullet.replaceAll("<", "&lt;").replaceAll(">", "&gt;"));
+>>>>>>> update
         result.put("code", 1);
         result.put("desc", "ok");
         return result;

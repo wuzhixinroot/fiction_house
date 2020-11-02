@@ -7,8 +7,18 @@ mybatis:
   type-aliases-package: xyz.zinglizingli.books.po
   configuration: {log-impl: org.apache.ibatis.logging.stdout.StdOutImpl}
 mysql: {charset: utf8mb4}
+<<<<<<< HEAD
 books: {lowestScore: '8.5'}
 crawl:
   website: {type: '2'}
   soft-novel: '0'
   manhua: '0'
+=======
+books: {lowestScore: 6.0}
+crawl:
+  patten: '1'
+  website: {type: 6}
+  soft-novel: '0'
+  manhua: '0'
+logging: {config: 'classpath:logback-boot.xml'}
+>>>>>>> update
